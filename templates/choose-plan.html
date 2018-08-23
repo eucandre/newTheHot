@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <!-- meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+
+    <!-- Uncomment the meta tags you are going to use! Be relevant and don't spam! -->
+
+    <meta name="keywords" content="premium html template, unique premium template, multipurpose template" />
+    <meta name="description" content="TheHotBrasil">
+
+    <!-- Title -->
+    {% block title %}
+        <title>TheHotBrasil</title>
+    {% endblock %}
+
+
+    {#    <!-- Retina Images -->#}
+    {#    <!-- Simply uncomment to use this script !! More here http://retina-images.complexcompulsions.com/#}
+    {#    <script>(function(w){var dpr=((w.devicePixelRatio===undefined)?1:w.devicePixelRatio);if(!!w.navigator.standalone){var r=new XMLHttpRequest();r.open('GET','/retinaimages.php?devicePixelRatio='+dpr,false);r.send()}else{document.cookie='devicePixelRatio='+dpr+'; path=/'}})(window)</script>#}
+    {#    <noscript><style id="devicePixelRatio" media="only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)">html{background-image:url("php-helpers/_retinaimages.php?devicePixelRatio=2")}</style></noscript>-->#}
+    {#    <!-- End Retina Images -->#}
+
+    <!-- iDevices & Retina Favicons
+	<link rel="apple-touch-icon" href="{{ STATIC_URL }}assets/images/favicons/apple-touch-icon-144-precomposed.png" sizes="144x144">
+	<link rel="apple-touch-icon" href="{{ STATIC_URL }}assets/images/favicons/apple-touch-icon-114-precomposed.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="{{ STATIC_URL }}assets/images/favicons/apple-touch-icon-72-precomposed.png" sizes="72x72">
+	<link rel="apple-touch-icon" href="apple-touch-icon-57-precomposed.png" sizes="57x57">-->
+
+    <!--  Desktop Favicons  -->
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}assets/images/favicons/favicon-16x16.png" sizes="16x16">
+    
+    <!-- Google Fonts CSS Stylesheet // More here http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400 ,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- ***** Boostrap Custom / Addons Stylesheets ***** -->
+    {% block style-bootstrap-custom %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/bootstrap.css" type="text/css" media="all">
+    {% endblock %}
+
+    <!-- Required CSS file for iOS Slider element -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/sliders/ios/style.css" type="text/css" media="all">
+
+    <!-- ***** Main + Responsive & Base sizing CSS Stylesheet ***** -->
+    {% block style-main %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/template.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/responsive.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/base-sizing.css" type="text/css" media="all">
+    {% endblock %}
+
+
+    <!-- Custom CSS Stylesheet (where you should add your own css rules) -->
+    {% block style-custom %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/custom.css" type="text/css" />
+    {% endblock %}
+
+    <!-- Modernizr Library -->
+    {% block js-modernizr %}
+        <script type="text/javascript" src="{{ STATIC_URL }}assets/js/modernizr.min.js"></script>
+    {% endblock %}
+
+    <!-- jQuery Library -->
+    {% block js-jquery %}
+        <script type="text/javascript" src="{{ STATIC_URL }}assets/js/jquery.js"></script>
+
+    {% endblock %}
+</head>
+<body>
+{% block titlePlan %}
+<section class="hg_section bg-white ptop-65">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<!-- Title element -->
+						<div class="kl-title-block clearfix text-center tbk-symbol-- tbk-icon-pos--after-title">
+							<!-- Title with montserrat font, custom font size and line height, bold style and light gray color -->
+							<h3 class="tbk__title montserrat fs-44 lh-44 fw-bold light-gray3">ESCOLHA SEU PLANO:</h3>
+							<!--/ Title with montserrat font, custom font size and line height, bold style and light gray color -->
+
+							<!-- Sub-Title with custom font size an very thin style -->
+							<h4 class="tbk__subtitle fs-18 fw-vthin">The Hot Brasil te oferece os planos que combinam com você</h4>
+							<!--/ Sub-Title with custom font size an very thin style -->
+						</div>
+						<!--/ Title element -->
+					</div>
+					<!--/ col-md-12 col-sm-12 -->
+				</div>
+				<!--/ row -->
+			</div>
+			<!--/ container -->
+		</section>
+{% endblock %}
+
+
+
+
+{% block plans %}
+    <!-- Icon Box - Left Floated Style section -->
+		<section class="hg_section bg-white">
+			<div class="container">
+				<div class="row">
+				{% for plan in planos %}
+					<div class="col-md-4 col-sm-4">
+						<!--/ Image Box style 4 - left symbol style -->
+						
+						<div class="box image-boxes imgboxes_style4 kl-title_style_left">
+							<!-- Image Box anchor link -->
+							<a class="imgboxes4_link imgboxes-wrapper" href="#" target="_blank">
+								<!-- Image -->
+								<img src="{{ STATIC_URL }}assets/images/plans/{{ plan.nome }}logo2.jpg" alt="{{ plan.nome }} LOGO" title="RESCUE SUPPORT" class="img-responsive imgbox_image cover-fit-img" />
+								<!--/ Image -->
+
+								<span class="imgboxes-border-helper"></span>
+
+								<!-- Title -->
+								<h3 class="m_title imgboxes-title">{{ plan.nome }}</h3>
+								<!--/ Title -->
+							</a>
+							<!--/ Image Box anchor link -->
+
+							<!-- Description -->
+							<p><strong>Duração: </strong>{{ plan.duracao }}. {{ plan.descricao }}</p>
+							<!--/ Description -->
+						</div>
+						<!--/ Image Box style 4 - left symbol style -->
+					  
+					</div>
+					 {% endfor %}					
+				</div>
+				<!--/ row -->
+			</div>
+			<!--/ hg_section_size container -->
+		</section>
+		{% endblock %}
+	</body>
+</html>

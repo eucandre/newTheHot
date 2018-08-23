@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <!-- meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+
+    <!-- Uncomment the meta tags you are going to use! Be relevant and don't spam! -->
+
+    <meta name="keywords" content="premium html template, unique premium template, multipurpose template" />
+    <meta name="description" content="TheHotBrasil">
+
+    <!-- Title -->
+    {% block title %}
+        <title>TheHotBrasil</title>
+    {% endblock %}
+
+
+    {#    <!-- Retina Images -->#}
+    {#    <!-- Simply uncomment to use this script !! More here http://retina-images.complexcompulsions.com/#}
+    {#    <script>(function(w){var dpr=((w.devicePixelRatio===undefined)?1:w.devicePixelRatio);if(!!w.navigator.standalone){var r=new XMLHttpRequest();r.open('GET','/retinaimages.php?devicePixelRatio='+dpr,false);r.send()}else{document.cookie='devicePixelRatio='+dpr+'; path=/'}})(window)</script>#}
+    {#    <noscript><style id="devicePixelRatio" media="only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)">html{background-image:url("php-helpers/_retinaimages.php?devicePixelRatio=2")}</style></noscript>-->#}
+    {#    <!-- End Retina Images -->#}
+
+
+    <!--  Desktop Favicons  -->
+    <link rel="icon" type="image/png" href="/media/static/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+
+    <!-- Google Fonts CSS Stylesheet // More here http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400 ,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- ***** Boostrap Custom / Addons Stylesheets ***** -->
+    {% block style-bootstrap-custom %}
+        <link rel="stylesheet" href="/media/static/assets/css/bootstrap.css" type="text/css" media="all">
+    {% endblock %}
+
+    <!-- Required CSS file for iOS Slider element -->
+    <link rel="stylesheet" href="/media/static/assets/css/sliders/ios/style.css" type="text/css" media="all">
+
+    <!-- ***** Main + Responsive & Base sizing CSS Stylesheet ***** -->
+    {% block style-main %}
+        <link rel="stylesheet" href="/media/static/assets/css/template.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/media/static/assets/css/responsive.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/media/static/assets/css/base-sizing.css" type="text/css" media="all">
+    {% endblock %}
+
+
+    <!-- Custom CSS Stylesheet (where you should add your own css rules) -->
+    {% block style-custom %}
+        <link rel="stylesheet" href="/media/static/assets/css/custom.css" type="text/css" />
+    {% endblock %}
+
+    <!-- Modernizr Library -->
+    {% block js-modernizr %}
+        <script type="text/javascript" src="/media/static/assets/js/modernizr.min.js"></script>
+    {% endblock %}
+
+    <!-- jQuery Library -->
+    {% block js-jquery %}
+        <script type="text/javascript" src="/media/static/assets/js/jquery.js"></script>
+
+    {% endblock %}
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="body-menu" style="background-color:black">
+<div class="container">
+<div id="popup"  class="popup panel panel-primary">
+
+    <!-- and here comes the image -->
+
+        <!-- Now this is the button which closes the popup-->
+    <div style="position: center; padding-top: 10%">
+    <h1 class="h-center"><strong>Atenção<br><br></strong></h1>
+    <div class="panel-center">
+
+        <h4  class="tbk__subtitle fs-18 fw-vthin h4-margin">
+            A plataforma THE HOT BRASIL é um aplicativo criado exclusivamente para o público maior de 18 anos<br>
+            <strong>Você tem mais de 18 anos e deseja continuar?</strong><br><br></h4>
+        <div class="panel-footer">
+            <div class="text-center">
+                    <button id="open" class="btn btn-lg btn-primary">SIM </button>
+                    &nbsp;
+                    <button id="getout" class="btn btn-lg btn-primary">NÃO</button>
+                </div>
+        </div>
+    </div>
+    </div>
+        <!-- and finally we close the POPUP FRAME-->
+        <!-- everything on it will show up within the popup so you can add more things not just an image -->
+</div>
+
+
+
+
+{% block titlePlan %}
+<section class="hg_section bg-black ptop-65">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<!-- Title element -->
+						<div class="kl-title-block clearfix text-center tbk-symbol-- tbk-icon-pos--after-title">
+                            <img src="/media/static/assets/images/logos/thehot-logo.gif" alt="LOGO" title="The Hot Brasil" class="" style="width: auto; height: 380px"/>
+							<!-- Title with montserrat font, custom font size and line height, bold style and light gray color -->
+							<h3 class="tbk__title montserrat fs-44 lh-44 fw-bold light-gray3"></h3>
+							<!--/ Title with montserrat font, custom font size and line height, bold style and light gray color -->
+
+							<!-- Sub-Title with custom font size an very thin style -->
+							<h4 class="tbk__subtitle fs-18 fw-vthin"></h4>
+							<!--/ Sub-Title with custom font size an very thin style -->
+						</div>
+						<!--/ Title element -->
+					</div>
+					<!--/ col-md-12 col-sm-12 -->
+				</div>
+				<!--/ row -->
+			</div>
+			<!--/ container -->
+		</section>
+{% endblock %}
+
+
+
+
+{% block plans %}
+    <!-- Icon Box - Left Floated Style section -->
+		<section class="hg_section bg-black">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4 col-sm-4">
+						<!--/ Image Box style 4 - left symbol style -->
+
+						<div class="box image-boxes imgboxes_style4 kl-title_style_left">
+							<!-- Image Box anchor link -->
+							<a class="imgboxes4_link imgboxes-wrapper" href="{% url 'cam-girls' %}" target="_self">
+								<!-- Image -->
+								<img src="/media/static/assets/images/plans/Lightlogo2.jpg" alt="CAMGIRLS LOGO" title="camgirls" class="img-responsive imgbox_image cover-fit-img" />
+								<!--/ Image -->
+
+								<span class="imgboxes-border-helper"></span>
+
+								<!-- Title -->
+								<h3 class="m_title imgboxes-title">CAM GIRLS</h3>
+								<!--/ Title -->
+							</a>
+							<!--/ Image Box anchor link -->
+
+							<!-- Description -->
+
+							<!--/ Description -->
+						</div>
+						<!--/ Image Box style 4 - left symbol style -->
+
+					</div>
+
+
+					<div class="col-md-4 col-sm-4">
+						<!--/ Image Box style 4 - left symbol style -->
+
+						<div class="box image-boxes imgboxes_style4 kl-title_style_left">
+							<!-- Image Box anchor link -->
+							<a class="imgboxes4_link imgboxes-wrapper" href="#" target="_self">
+								<!-- Image -->
+								<img src="/media/static/assets/images/plans/Mediumlogo2.jpg" alt="Acompanhantes LOGO" title="acompanhantes" class="img-responsive imgbox_image cover-fit-img" />
+								<!--/ Image -->
+
+								<span class="imgboxes-border-helper"></span>
+
+								<!-- Title -->
+								<h3 class="m_title imgboxes-title">Acompanhantes</h3>
+								<!--/ Title -->
+							</a>
+							<!--/ Image Box anchor link -->
+
+							<!-- Description -->
+
+							<!--/ Description -->
+						</div>
+						<!--/ Image Box style 4 - left symbol style -->
+
+					</div>
+
+					<div class="col-md-4 col-sm-4">
+						<!--/ Image Box style 4 - left symbol style -->
+
+						<div class="box image-boxes imgboxes_style4 kl-title_style_left">
+							<!-- Image Box anchor link -->
+							<a class="imgboxes4_link imgboxes-wrapper" href="#" target="_self">
+								<!-- Image -->
+								<img src="/media/static/assets/images/icon/motel.jpg" alt="motel LOGO" title="motel" class="img-responsive imgbox_image cover-fit-img" />
+								<!--/ Image -->
+
+								<span class="imgboxes-border-helper"></span>
+
+								<!-- Title -->
+								<h3 class="m_title imgboxes-title">Motéis</h3>
+								<!--/ Title -->
+							</a>
+							<!--/ Image Box anchor link -->
+
+							<!-- Description -->
+
+							<!--/ Description -->
+						</div>
+						<!--/ Image Box style 4 - left symbol style -->
+
+					</div>
+
+				</div>
+				<!--/ row -->
+			</div>
+			<!--/ hg_section_size container -->
+		</section>
+    </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-md">
+                <img src="/media/static/assets/videos/thehotintro800px.gif"  style="margin-top: 40%; width: auto; height: auto" >
+            </div>
+        </div>
+
+		{% endblock %}
+       <script>
+
+
+
+        $("#myModal").modal()
+        $(".container").hide();
+
+        window.setTimeout(closeModal, 7000)
+
+           function closeModal() {
+            $(".container").show();
+            $('#myModal').modal('hide');
+        }
+
+        $(document).ready(function () {
+            $('body').css({'overflow':'hidden'});
+
+            //select the POPUP FRAME and show it
+            $("#popup").hide().fadeIn(1000);
+
+            //close the POPUP if the button with id="close" is clicked
+            $("#open").on("click", function (e) {
+                e.preventDefault();
+                $("#popup").fadeOut(1000);
+                $('body').css({'overflow':'visible'});
+            });
+
+            $("#getout").on("click", function (e) {
+                e.preventDefault();
+                window.close();
+            });
+
+        });
+
+
+
+        </script>
+
+        <style>
+            #myVideo{margin-left: -24%; margin-top: 30%; width: 150%; height: auto;}
+        .modal-backdrop {
+            background-color: black;
+        }
+
+        .modal-backdrop.in {
+            opacity: 1;
+        }
+        </style>
+
+	</body>
+</html>

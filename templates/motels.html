@@ -1,0 +1,1871 @@
+{% load account %}
+{% load socialaccount %}
+<!doctype html>
+<html dir="ltr" lang="pt-BR">
+<head>
+    <!-- meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+
+    <!-- Uncomment the meta tags you are going to use! Be relevant and don't spam! -->
+
+    <meta name="keywords" content="premium html template, unique premium template, multipurpose template" />
+    <meta name="description" content="TheHotBrasil">
+
+    <!-- Title -->
+    {% block title %}
+        <title>TheHotBrasil</title>
+    {% endblock %}
+
+
+    {#    <!-- Retina Images -->#}
+    {#    <!-- Simply uncomment to use this script !! More here http://retina-images.complexcompulsions.com/#}
+    {#    <script>(function(w){var dpr=((w.devicePixelRatio===undefined)?1:w.devicePixelRatio);if(!!w.navigator.standalone){var r=new XMLHttpRequest();r.open('GET','/retinaimages.php?devicePixelRatio='+dpr,false);r.send()}else{document.cookie='devicePixelRatio='+dpr+'; path=/'}})(window)</script>#}
+    {#    <noscript><style id="devicePixelRatio" media="only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)">html{background-image:url("php-helpers/_retinaimages.php?devicePixelRatio=2")}</style></noscript>-->#}
+    {#    <!-- End Retina Images -->#}
+
+    <!-- iDevices & Retina Favicons
+    <link rel="apple-touch-icon" href="{{ STATIC_URL }}assets/images/favicons/apple-touch-icon-144-precomposed.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="{{ STATIC_URL }}assets/images/favicons/apple-touch-icon-114-precomposed.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="{{ STATIC_URL }}assets/images/favicons/apple-touch-icon-72-precomposed.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="apple-touch-icon-57-precomposed.png" sizes="57x57">-->
+
+    <!--  Desktop Favicons  -->
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}assets/images/favicons/favicon-16x16.png" sizes="16x16">
+    <!-- <link rel="icon" type="image/png" href="{{ STATIC_URL }}assets/images/favicons/favicon-32x32.png" sizes="32x32"> -->
+    <!-- <link rel="icon" type="image/png" href="{{ STATIC_URL }}assets/images/favicons/favicon-96x96.png" sizes="96x96"> -->
+
+    <!-- Google Fonts CSS Stylesheet // More here http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400 ,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- ***** Boostrap Custom / Addons Stylesheets ***** -->
+    {% block style-bootstrap-custom %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/bootstrap.css" type="text/css" media="all">
+    {% endblock %}
+
+    <!-- Required CSS file for iOS Slider element -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/sliders/ios/style.css" type="text/css" media="all">
+
+    <!-- ***** Main + Responsive & Base sizing CSS Stylesheet ***** -->
+    {% block style-main %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/template.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/responsive.css" type="text/css" media="all">
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/base-sizing.css" type="text/css" media="all">
+    {% endblock %}
+
+
+    <!-- Custom CSS Stylesheet (where you should add your own css rules) -->
+    {% block style-custom %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/custom.css" type="text/css" />
+    {% endblock %}
+
+    <!-- Modernizr Library -->
+    {% block js-modernizr %}
+        <script type="text/javascript" src="{{ STATIC_URL }}assets/js/modernizr.min.js"></script>
+    {% endblock %}
+
+    <!-- jQuery Library -->
+    {% block js-jquery %}
+        <script type="text/javascript" src="{{ STATIC_URL }}assets/js/jquery.js"></script>
+
+    {% endblock %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+{% block body %}
+    {% block body-tag %}
+        <body class="preloader">
+    {% endblock %}
+
+
+    <div id="popup"  class="popup panel panel-primary">
+
+        <!-- and here comes the image -->
+
+            <!-- Now this is the button which closes the popup-->
+        <div style="position: center; padding-top: 10%">
+        <h1 class="h-center"><strong>Atenção<br><br></strong></h1>
+        <div class="panel-center">
+
+            <h4  class="tbk__subtitle fs-18 fw-vthin h4-margin">
+                Todas as modelos que aparecem neste site <strong>são maiores de idade.</strong>
+                A nossa equipe não agencia as modelos e <strong> não tem nenhum vínculo
+                na contratação dos serviços por elas prestados </strong>.
+                Somos apenas um classificado erótico online.</h4>
+            <div class="panel-footer">
+                <div class="text-center">
+                        <button id="open" class="btn btn-lg btn-primary">OK</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+        <!-- and finally we close the POPUP FRAME-->
+        <!-- everything on it will show up within the popup so you can add more things not just an image -->
+
+<!-- Support Panel -->
+{% block support-panel %}
+
+{% endblock %}
+<!--/ Support Panel -->
+
+
+<!-- Page Wrapper -->
+{% block page-wrapper %}
+    <div id="page_wrapper">
+        <!-- Header style 1 -->
+        {% block header-style %}
+            <header id="header" class="site-header cta_button" data-header-style="1">
+                <!-- header bg -->
+                <div class="kl-header-bg"></div>
+                <!--/ header bg -->
+
+                <!-- siteheader-container -->
+                <div class="container siteheader-container">
+                    <!-- top-header -->
+                    <div class="kl-top-header clearfix">
+                        <!-- HEADER ACTION -->
+                        <div class="header-links-container ">
+                            <ul class="topnav navRight topnav">
+                                <!-- Support panel trigger -->
+                                <li>
+                                    <a class="popup-with-form" href="#">
+                                        <i class="glyphicon glyphicon-log-in visible-xs xs-icon"></i>
+                                        <span class="hidden-xs">QUERO ANUNCIAR</span>
+                                    </a>
+                                </li>
+                                <!--/ Support panel trigger -->
+
+                                <!-- Login trigger -->
+                                <li>
+                                {% if user.pk %}
+                                    <a class="" href="{% url 'account_logout' %}?next={{request.path}}">
+                                        <i class="glyphicon glyphicon-log-in visible-xs xs-icon"></i>
+
+                                        <span class="hidden-xs">{{ user.username }}</span>
+
+                                    </a>
+                                 {% else %}
+                                    <a class="popup-with-form" href="#login_panel">
+                                        <i class="glyphicon glyphicon-log-in visible-xs xs-icon"></i>
+                                        <span class="hidden-xs">LOGIN</span>
+                                    </a>
+                                {% endif %}
+                                </li>
+                                <!--/ Login trigger -->
+                            </ul>
+
+                            <!-- Languages -->
+                            {% block languages %}
+                                <ul class="topnav navLeft topnav--lang">
+                                    <li class="languages drop">
+                                        <a href="#">
+                                            <span class="globe glyphicon glyphicon-globe icon-white xs-icon"></span>
+                                            <span class="hidden-xs">IDIOMA</span>
+                                        </a>
+                                        <div class="pPanel">
+                                            <ul class="inner">
+                                                <li class="toplang-item">
+                                                    <a href="#">
+                                                        <img src="{{ STATIC_URL }}assets/images/en.png" alt="English" class="toplang-flag "> Inglês
+                                                    </a>
+                                                </li>
+                                                <li class="toplang-item">
+                                                    <a href="#">
+                                                        <img src="{{ STATIC_URL }}assets/images/fr.png" alt="Francais" class="toplang-flag "> Francês
+                                                    </a>
+                                                </li>
+                                                <li class="toplang-item">
+                                                    <a href="#">
+                                                        <img src="{{ STATIC_URL }}assets/images/es.png" alt="Espanol" class="toplang-flag "> Espanhol
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            {% endblock %}
+                            <!--/ Languages -->
+
+                            <!-- header search -->
+                            {% block header-search %}
+                                {#                                    <div id="search" class="header-search">#}
+                                {#                                        <a href="#" class="searchBtn "><span class="glyphicon glyphicon-search icon-white"></span></a>#}
+                                {#                                        <div class="search-container">#}
+                                {#                                            <form id="searchform" class="header-searchform" action="https://www.google.ro/search" method="get" target="_blank">#}
+                                {#                                                <input type="hidden" id="q" name="q"/>#}
+                                {#                                                <input name="s" maxlength="20" class="inputbox" type="text" size="20" value="SEARCH ..." onblur="if (this.value=='') this.value='SEARCH ...';" onfocus="if (this.value=='SEARCH ...') this.value='';">#}
+                                {#                                                <button type="submit" id="searchsubmit" class="searchsubmit glyphicon glyphicon-search icon-white"></button>#}
+                                {#                                            </form>#}
+                                {#                                        </div>#}
+                                {#                                    </div>#}
+                            {% endblock %}
+                            <!--/ header search -->
+                        </div>
+                        <!--/ HEADER ACTION -->
+
+                        <!-- HEADER ACTION left -->
+                        <div class="header-leftside-container ">
+                            <!-- Header Social links -->
+                            {% block header-social-links %}
+                                <ul class="social-icons sc--clean topnav navRight">
+                                    <li><a href="#" target="_self" class="icon-facebook" title="Facebook"></a></li>
+                                    <li><a href="#" target="_self" class="icon-twitter" title="Twitter"></a></li>
+                                    <li><a href="#" target="_self" class="icon-instagram" title="Instagram"></a></li>
+                                </ul>
+                            {% endblock %}
+                            <!--/ Header Social links -->
+
+                            <div class="clearfix visible-xxs">
+                            </div>
+
+                            <!-- header contact text -->
+                            {% block header-contact %}
+                                <span class="kl-header-toptext">FALE CONOSCO: <a href="#" class="fw-bold">+55 82 9 8765 8765</a></span>
+                            {% endblock %}
+                            <!--/ header contact text -->
+                        </div>
+                        <!--/ HEADER ACTION left -->
+
+                        <!-- separator -->
+                        <div class="separator"></div>
+                        <!--/ separator -->
+                    </div>
+                    <!--/ top-header -->
+
+                    <!-- main-header -->
+                    <div class="kl-main-header clearfix">
+                        <!-- left side -->
+                        <!-- logo container-->
+                        <div class="logo-container hasInfoCard logosize--yes">
+                            <!-- Logo -->
+                            <h1 class="site-logo logo" id="logo">
+                                <a href="{% url 'cam-girls' %}" title="">
+                                    <img src="{{ STATIC_URL }}assets/images/thehotbrasil-branca.png" class="logo-img" alt="TheHotBrasil" title="TheHotBrasil" />
+                                </a>
+                            </h1>
+                            <!--/ Logo -->
+
+                            <!-- InfoCard -->
+                            {% block infocard %}
+
+                            {% endblock %}
+                            <!--/ InfoCard -->
+                        </div>
+                        <!--/ logo container-->
+
+                        <!-- separator -->
+                        <div class="separator visible-xxs"></div>
+                        <!--/ separator -->
+
+                        <!-- responsive menu trigger -->
+                        <div id="zn-res-menuwrapper">
+                            <a href="#" class="zn-res-trigger zn-header-icon"></a>
+                        </div>
+                        <!--/ responsive menu trigger -->
+
+                        <!-- main menu -->
+                        {% block main-menu %}
+                            <div id="main-menu" class="main-nav zn_mega_wrapper ">
+                                <ul id="menu-main-menu" class="main-menu zn_mega_menu">
+                                    {#                                        <li class="menu-item-mega-parent"><a href="{% url 'index' %}">MULHERES</a></li>#}
+
+
+
+                                </ul>
+                            </div>
+                        {% endblock %}
+                        <!--/ main menu -->
+
+                        <!-- right side -->
+                        <!-- Call to action ribbon Free Quote -->
+                        {% block call-action-ribbon %}
+                            <a href="#" id="ctabutton" class="ctabutton kl-cta-ribbon" title="CAM GIRLS" target="_self"><strong>GATAS</strong>NA CAM<svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" preserveaspectratio="none" width="14px" height="5px" viewbox="0 0 14.017 5.006" enable-background="new 0 0 14.017 5.006" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path></svg></a>
+                        {% endblock %}
+                        <!--/ Call to action ribbon Free Quote -->
+
+                        <!-- Shop Cart -->
+                        {% block shop-cart %}
+                            {#                                <ul class="topnav navLeft topnav--cart">#}
+                            {#                                    <li class="drop">#}
+                            {#                                        <a href="#" class="kl-cart-button" title="View your shopping cart">#}
+                            {#                                            <i class="glyphicon glyphicon-shopping-cart icon-white flipX-icon xs-icon" data-count="1"></i>#}
+                            {#                                            <span class="hidden-xs hidden-sm hidden-md hidden-lg">MY CART</span>#}
+                            {#                                        </a>#}
+                            {#                                        <div class="pPanel">#}
+                            {#                                            <div class="inner cart-container">#}
+                            {#                                                <div class="widget_shopping_cart_content">#}
+                            {#                                                    <ul class="cart_list product_list_widget ">#}
+                            {#                                                        <li>#}
+                            {#                                                            <a href="#" class="remove" title="Remove this item">×</a>#}
+                            {#                                                            <a href="#" class="product-title">#}
+                            {#                                                                <img src="{{ STATIC_URL }}assets/images/img4-90x90.jpg" alt="Hoodie With Patch Logo" title="Hoodie With Patch Logo" />Hoodie With Patch Logo#}
+                            {#                                                            </a>#}
+                            {#                                                            <span class="color-variations">Blue</span>#}
+                            {#                                                            <span class="quantity">1 × <span class="amount">$99.90</span></span></li>#}
+                            {#                                                    </ul>#}
+                            {#                                                    <!-- end product list -->#}
+                            {#                                                    <p class="total">#}
+                            {#                                                        <strong>Subtotal:</strong><span class="amount">$99.90</span>#}
+                            {#                                                    </p>#}
+                            {#                                                    <p class="buttons">#}
+                            {#                                                        <a href="cart.html" class="button wc-forward">View Cart</a>#}
+                            {#                                                        <a href="checkout.html" class="button checkout wc-forward">Checkout</a>#}
+                            {#                                                    </p>#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                        </div>#}
+                            {#                                    </li>#}
+                            {#                                </ul>#}
+                        {% endblock %}
+                        <!--/ Shop Cart -->
+                    </div>
+                    <!--/ main-header -->
+                </div>
+                <!--/ siteheader-container -->
+            </header>
+        {% endblock %}
+        <!-- / Header style 1 -->
+
+
+        <!-- Slideshow - iOS Slider element with animateme scroll efect, custom height and bottom mask style 2 -->
+        {% block slideshow %}
+            <div class="kl-slideshow iosslider-slideshow uh_light_gray maskcontainer--shadow_ud iosslider--custom-height scrollme">
+                <!-- Loader -->
+                <div class="kl-loader">
+                    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="40px" height="40px" viewbox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path><path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(98.3774 20 20)"><animatetransform attributetype="xml" attributename="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatcount="indefinite"></animatetransform></path></svg>
+                </div>
+                <!-- Loader -->
+
+                <div class="bgback">
+                </div>
+
+                <!-- Animated Sparkles -->
+                <div class="th-sparkles">
+                </div>
+                <!--/ Animated Sparkles -->
+
+                <!-- iOS Slider wrapper with animateme scroll efect -->
+                <div class="iosSlider kl-slideshow-inner animateme" data-trans="6000" data-autoplay="1" data-infinite="true" data-when="span" data-from="0" data-to="0.75" data-translatey="300" data-easing="linear">
+                    <!-- Slides -->
+                    <div class="kl-iosslider hideControls">
+                        <!-- Slide 1 -->
+                        <div class="item iosslider__item">
+                            <!-- Video background container -->
+                            <div class="kl-video-container">
+                                <!-- Video wrapper -->
+                                <div class="kl-video-wrapper video-grid-overlay">
+                                    <!-- Self Hosted Video Source -->
+                                    <div class="kl-video valign halign" style="width: 100%; height: 100%;" data-setup='{
+                                    "position": "absolute",
+                                    "loop": true,
+                                    "autoplay": true,
+                                    "muted": true,
+                                    "mp4": "/static/assets/videos/video.mp4",
+                                    "poster": "/static/assets/videos/video.jpg",
+                                    "video_ratio": "1.7778" }'>
+                                    </div>
+                                </div>
+                                <!--/ Video wrapper -->
+                            </div>
+                            <!--/ Video background container -->
+
+                            <!-- Color overlay -->
+                            <div class="kl-slide-overlay" style="background-color:">
+                            </div>
+                            <!--/ Color overlay -->
+
+                            <!-- Captions container -->
+                            <div class="container kl-iosslide-caption kl-ioscaption--style4 s4ext fromleft klios-alignleft kl-caption-posv-bottom">
+                                <!-- Captions animateme wrapper -->
+                                <div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
+                                    <!-- Main Big Title -->
+                                    {#                                        <h2 class="main_title has_titlebig "><span><strong></strong> </span></h2>#}
+                                    <!--/ Main Big Title -->
+
+                                    <!-- Big Title -->
+                                    <h3 class="title_big">ESTOU AGORA NA <strong>CAM</strong></h3>
+                                    <!--/ Big Title -->
+
+                                    <!-- More button -->
+                                    <a class="more" href="#" target="_self">ENTRAR</a>
+                                    <!--/ More button -->
+
+                                    <!-- Small Title -->
+                                    <h4 class="title_small">NOME DA MODELO</h4>
+                                    <!--/ Small Title -->
+                                </div>
+                                <!--/ Captions animateme wrapper -->
+                            </div>
+                            <!--/ Captions container -->
+                        </div>
+                        <!--/ Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="item iosslider__item">
+                            <!-- Image -->
+                            <div class="slide-item-bg" style="background-image:url(static/assets/images/sliders/ios03-lq.jpg);">
+                            </div>
+                            <!--/ Image -->
+
+                            <!-- Gradient overlay -->
+                            <div class="kl-slide-overlay" style="background:rgba(32,55,152,0.4); background: -moz-linear-gradient(left, rgba(32,55,152,0.4) 0%, rgba(17,93,131,0.25) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(32,55,152,0.4)), color-stop(100%,rgba(17,93,131,0.25))); background: -webkit-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -o-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -ms-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: linear-gradient(to right, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); ">
+                            </div>
+                            <!--/ Gradient overlay -->
+
+                            <!-- Captions container -->
+                            <div class="container kl-iosslide-caption kl-ioscaption--style4 s4ext fromleft klios-alignleft kl-caption-posv-bottom">
+                                <!-- Captions animateme wrapper -->
+                                <div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
+                                    <!-- Main Big Title -->
+                                    {#                                        <h2 class="main_title has_titlebig "><span><strong></strong> </span></h2>#}
+                                    <!--/ Main Big Title -->
+
+                                    <!-- Big Title -->
+                                    <h3 class="title_big">ESTOU AGORA NA <strong>CAM</strong></h3>
+                                    <!--/ Big Title -->
+
+                                    <!-- More button -->
+                                    <a class="more" href="#" target="_self">ENTRAR</a>
+                                    <!--/ More button -->
+
+                                    <!-- Small Title -->
+                                    <h4 class="title_small">NOME DA MODELO</h4>
+                                    <!--/ Small Title -->
+                                </div>
+                                <!--/ Captions animateme wrapper -->
+                            </div>
+                            <!--/ Captions container -->
+                        </div>
+                        <!--/ Slide 2 -->
+
+                        <!-- Slide 3 -->
+                        <div class="item iosslider__item">
+                            <!-- Image -->
+                            <div class="slide-item-bg" style="background-image:url(static/assets/images/sliders/ios03-lq.jpg);">
+                            </div>
+                            <!--/ Image -->
+
+                            <!-- Gradient overlay -->
+                            <div class="kl-slide-overlay" style="background:rgba(32,55,152,0.4); background: -moz-linear-gradient(left, rgba(32,55,152,0.4) 0%, rgba(17,93,131,0.25) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(32,55,152,0.4)), color-stop(100%,rgba(17,93,131,0.25))); background: -webkit-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -o-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -ms-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: linear-gradient(to right, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); ">
+                            </div>
+                            <!--/ Gradient overlay -->
+
+                            <!-- Captions container -->
+                            <div class="container kl-iosslide-caption kl-ioscaption--style4 s4ext fromleft klios-alignleft kl-caption-posv-bottom">
+                                <!-- Captions animateme wrapper -->
+                                <div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
+                                    <!-- Main Big Title -->
+                                    {#                                        <h2 class="main_title has_titlebig "><span><strong></strong> </span></h2>#}
+                                    <!--/ Main Big Title -->
+
+                                    <!-- Big Title -->
+                                    <h3 class="title_big">ESTOU AGORA NA <strong>CAM</strong></h3>
+                                    <!--/ Big Title -->
+
+                                    <!-- More button -->
+                                    <a class="more" href="#" target="_self">ENTRAR</a>
+                                    <!--/ More button -->
+
+                                    <!-- Small Title -->
+                                    <h4 class="title_small">NOME DA MODELO</h4>
+                                    <!--/ Small Title -->
+                                </div>
+                                <!--/ Captions animateme wrapper -->
+                            </div>
+                            <!--/ Captions container -->
+                        </div>
+                        <!--/ Slide 3 -->
+
+                        <!-- Slide 4 -->
+                        <div class="item iosslider__item">
+                            <!-- Image -->
+                            <div class="slide-item-bg" style="background-image:url(static/assets/images/sliders/ios03-lq.jpg);">
+                            </div>
+                            <!--/ Image -->
+
+                            <!-- Gradient overlay -->
+                            <div class="kl-slide-overlay" style="background:rgba(32,55,152,0.4); background: -moz-linear-gradient(left, rgba(32,55,152,0.4) 0%, rgba(17,93,131,0.25) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(32,55,152,0.4)), color-stop(100%,rgba(17,93,131,0.25))); background: -webkit-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -o-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -ms-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: linear-gradient(to right, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); ">
+                            </div>
+                            <!--/ Gradient overlay -->
+
+                            <!-- Captions container -->
+                            <div class="container kl-iosslide-caption kl-ioscaption--style4 s4ext fromleft klios-alignleft kl-caption-posv-bottom">
+                                <!-- Captions animateme wrapper -->
+                                <div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
+                                    <!-- Main Big Title -->
+                                    {#                                        <h2 class="main_title has_titlebig "><span><strong></strong> </span></h2>#}
+                                    <!--/ Main Big Title -->
+
+                                    <!-- Big Title -->
+                                    <h3 class="title_big">ESTOU AGORA NA <strong>CAM</strong></h3>
+                                    <!--/ Big Title -->
+
+                                    <!-- More button -->
+                                    <a class="more" href="#" target="_self">ENTRAR</a>
+                                    <!--/ More button -->
+
+                                    <!-- Small Title -->
+                                    <h4 class="title_small">NOME DA MODELO</h4>
+                                    <!--/ Small Title -->
+                                </div>
+                                <!--/ Captions animateme wrapper -->
+                            </div>
+                            <!--/ Captions container -->
+                        </div>
+                        <!--/ Slide 4 -->
+
+                        <!-- Slide 5 -->
+                        <div class="item iosslider__item">
+                            <!-- Image -->
+                            <div class="slide-item-bg" style="background-image:url(static/assets/images/sliders/ios03-lq.jpg);">
+                            </div>
+                            <!--/ Image -->
+
+                            <!-- Gradient overlay -->
+                            <div class="kl-slide-overlay" style="background:rgba(32,55,152,0.4); background: -moz-linear-gradient(left, rgba(32,55,152,0.4) 0%, rgba(17,93,131,0.25) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(32,55,152,0.4)), color-stop(100%,rgba(17,93,131,0.25))); background: -webkit-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -o-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -ms-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: linear-gradient(to right, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); ">
+                            </div>
+                            <!--/ Gradient overlay -->
+
+                            <!-- Captions container -->
+                            <div class="container kl-iosslide-caption kl-ioscaption--style4 s4ext fromleft klios-alignleft kl-caption-posv-bottom">
+                                <!-- Captions animateme wrapper -->
+                                <div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
+                                    <!-- Main Big Title -->
+                                    {#                                        <h2 class="main_title has_titlebig "><span><strong></strong> </span></h2>#}
+                                    <!--/ Main Big Title -->
+
+                                    <!-- Big Title -->
+                                    <h3 class="title_big">ESTOU AGORA NA <strong>CAM</strong></h3>
+                                    <!--/ Big Title -->
+
+                                    <!-- More button -->
+                                    <a class="more" href="#" target="_self">ENTRAR</a>
+                                    <!--/ More button -->
+
+                                    <!-- Small Title -->
+                                    <h4 class="title_small">NOME DA MODELO</h4>
+                                    <!--/ Small Title -->
+                                </div>
+                                <!--/ Captions animateme wrapper -->
+                            </div>
+                            <!--/ Captions container -->
+                        </div>
+                        <!--/ Slide 5 -->
+                    </div>
+                    <!--/ Slides -->
+
+                    <!-- Navigation Controls - Prev -->
+                    <div class="kl-iosslider-prev">
+                        <!-- Arrow -->
+                        <span class="thin-arrows ta__prev"></span>
+                        <!--/ Arrow -->
+
+                        <!-- Label - prev -->
+                        <div class="btn-label">
+                        </div>
+                        <!--/ Label - prev -->
+                    </div>
+                    <!--/ Navigation Controls - Prev -->
+
+                    <!-- Navigation Controls - Next -->
+                    <div class="kl-iosslider-next">
+                        <!-- Arrow -->
+                        <span class="thin-arrows ta__next"></span>
+                        <!--/ Arrow -->
+
+                        <!-- Label - next -->
+                        <div class="btn-label">
+                        </div>
+                        <!--/ Label - next -->
+                    </div>
+                    <!--/ Navigation Controls - Prev -->
+                </div>
+                <!--/ iOS Slider wrapper with animateme scroll efect -->
+
+                <!-- Bullets -->
+                <div class="kl-ios-selectors-block bullets2">
+                    <div class="selectors">
+                        <!-- Item #1 -->
+                        <div class="item iosslider__bull-item first">
+                        </div>
+                        <!--/ Item #1 -->
+
+                        <!-- Item #2 -->
+                        <div class="item iosslider__bull-item">
+                        </div>
+                        <!--/ Item #2 -->
+
+                        <!-- Item #3 -->
+                        <div class="item iosslider__bull-item">
+                        </div>
+                        <!--/ Item #3 -->
+
+                        <!-- Item #4 -->
+                        <div class="item iosslider__bull-item selected">
+                        </div>
+                        <!--/ Item #4 -->
+
+                        <!-- Item #5 -->
+                        <div class="item iosslider__bull-item">
+                        </div>
+                        <!--/ Item #5 -->
+                    </div>
+                    <!--/ .selectors -->
+                </div>
+                <!--/ Bullets -->
+
+                <div class="scrollbarContainer">
+                </div>
+
+                <!-- Bottom mask style 3 -->
+                <div class="kl-bottommask kl-bottommask--mask3">
+                    <svg width="5000px" height="57px" class="svgmask " viewBox="0 0 5000 57" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-mask3">
+                                <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+                                <feGaussianBlur stdDeviation="2" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+                                <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+                                <feMerge>
+                                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                                    <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <path d="M9.09383679e-13,57.0005249 L9.09383679e-13,34.0075249 L2418,34.0075249 L2434,34.0075249 C2434,34.0075249 2441.89,33.2585249 2448,31.0245249 C2454.11,28.7905249 2479,11.0005249 2479,11.0005249 L2492,2.00052487 C2492,2.00052487 2495.121,-0.0374751261 2500,0.000524873861 C2505.267,-0.0294751261 2508,2.00052487 2508,2.00052487 L2521,11.0005249 C2521,11.0005249 2545.89,28.7905249 2552,31.0245249 C2558.11,33.2585249 2566,34.0075249 2566,34.0075249 L2582,34.0075249 L5000,34.0075249 L5000,57.0005249 L2500,57.0005249 L1148,57.0005249 L9.09383679e-13,57.0005249 Z" class="bmask-bgfill" filter="url(#filter-mask3)" fill="#f5f5f5"></path>
+                    </svg>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                </div>
+                <!--/ Bottom mask style 3 -->
+            </div>
+        {% endblock %}
+        <!--/ Slideshow - iOS Slider element with animateme scroll efect, custom height and bottom mask style 2 -->
+        {% block sections %}
+            <section class="hg_section hg_section--relative ptop-80 pbottom-80">
+                <div class="full_width">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- Title -->
+                            {#                      <div class="kl-title-block clearfix tbk--text-default tbk--left text-center tbk-symbol--line tbk-icon-pos--after-title">#}
+                            {#                          <h3 class="tbk__title ">ACTION BOX / CLASSIC</h3>#}
+                            {#                          <div class="tbk__symbol">#}
+                            {#                              <span></span>#}
+                            {#                          </div>#}
+                            {#                      </div>#}
+                            <!-- Title -->
+
+                            <!-- Action box element style 1 -->
+                            <div class="action_box style1" data-arrowpos="center">
+                                <div class="action_box_inner">
+                                    <div class="action_box_content">
+                                        <!-- Content -->
+                                        <div class="ac-content-text">
+                                            <h4 class="text">São mais de 100 gatas na cam exclusivas para você escolher!</h4>
+                                            <h5 class="ac-subtitle">O conteúdo do nosso portal é proibido para menores de 18 anos.</h5>
+                                        </div>
+                                        <!--/ Content -->
+
+                                        <!-- Buttons -->
+                                        <div class="ac-buttons">
+                                            <a class="btn btn-fullwhite ac-btn" href="choose-plan/">QUERO ASSINAR</a>
+                                        </div>
+                                        <!--/ Buttons -->
+                                    </div>
+                                    <!--/ .action_box_content -->
+                                </div>
+                                <!--/ .action_box_inner -->
+                            </div>
+                            <!--/ .action_box .style1 -->
+                        </div>
+                        <!--/ col-md-12 col-sm-12 -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- Section title -->
+                            <div class="kl-title-block clearfix tbk--text-default tbk--center text-center tbk-symbol--line tbk--colored tbk-icon-pos--after-title">
+                                <!-- Title -->
+                                {#                          <h3 class="tbk__title montserrat fw-bold">RECENT WORK 1 / STYLE 2 </h3>#}
+                                {#                          <!--/ Title -->#}
+                                {##}
+                                {#                          <!-- Title bottom symbol -->#}
+                                {#                          <div class="tbk__symbol ">#}
+                                {#                              <span class="tbg"></span>#}
+                                {#                          </div>#}
+                                <!--/ Title bottom symbol -->
+                            </div>
+                            <!--/ Section title -->
+
+{#                            <!-- Recent Work carousel 1 style 2 element -->#}
+{#                            <div class="recentwork_carousel recentwork_carousel--2 clearfix">#}
+{#                                <div class="row">#}
+{#                                    <div class="col-sm-4">#}
+{#                                        <!-- Left side -->#}
+{#                                        <div class="recentwork_carousel__left">#}
+{#                                            <!-- Title -->#}
+{#                                            <h3 class="recentwork_carousel__title m_title">GATAS NA CAM</h3>#}
+{#                                            <!--/ Title -->#}
+{##}
+{#                                            <!-- Description -->#}
+{#                                            <p class="recentwork_carousel__desc">#}
+{#                                                São mais de 100 GATAS NA CAM esperando por você, veja quem está online nesse momento.#}
+{#                                            </p>#}
+{#                                            <!--/ Description -->#}
+{##}
+{#                                            <!-- View all button -->#}
+{#                                            <a href="#" class="btn btn-fullcolor">TODAS AS GATAS</a>#}
+{#                                            <!--/ View all button -->#}
+{##}
+{#                                            <!-- Slick navigation -->#}
+{#                                            <div class="hgSlickNav recentwork_carousel__controls clearfix"></div>#}
+{#                                        </div>#}
+{#                                        <!--/ Left side - .recentwork_carousel__left -->#}
+{#                                    </div>#}
+{#                                    <!--/ col-sm-4 -->#}
+{##}
+{#                                    <div class="col-sm-8">#}
+{#                                        <!-- Recent Work - carousel wrapper -->#}
+{#                                        <div class="recentwork_carousel__crsl-wrapper">#}
+{#                                            <div class="recent_works1 recentwork_carousel__crsl js-slick" data-slick='{#}
+{#                                          "infinite": true,#}
+{#                                          "slidesToShow": 3,#}
+{#                                          "slidesToScroll": 1,#}
+{#                                          "autoplay": true,#}
+{#                                          "autoplaySpeed": 5000,#}
+{#                                          "appendArrows": ".recentwork_carousel--2 .hgSlickNav",#}
+{#                                          "arrows": true,#}
+{#                                          "responsive": [#}
+{#                                              {#}
+{#                                                  "breakpoint": 1199,#}
+{#                                                  "settings": {#}
+{#                                                      "slidesToShow": 2#}
+{#                                                  }#}
+{#                                              },#}
+{#                                              {#}
+{#                                                  "breakpoint": 560,#}
+{#                                                  "settings": {#}
+{#                                                      "slidesToShow": 1#}
+{#                                                  }#}
+{#                                              }#}
+{#                                          ]#}
+{#                                      }'>#}
+{#                                                <!-- Item #1 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/frame-270x203.jpg);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Go forward applications</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #1 -->#}
+{##}
+{#                                                <!-- Item #2 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/ptf1-270x203.png);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Progressively harness</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #2 -->#}
+{##}
+{#                                                <!-- Item #3 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/moon-270x203.jpg);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Authoritatively benchmark virtual</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #3 -->#}
+{##}
+{#                                                <!-- Item #4 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/image-270x203.jpg);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Continually unleash scalable</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #4 -->#}
+{##}
+{#                                                <!-- Item #5 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/graph3-270x203.png);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Cross-unit meta-services</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #5 -->#}
+{##}
+{#                                                <!-- Item #6 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/untitled-1jhgggfd-270x203.png);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Efficiently incubate sticky vortals</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #6 -->#}
+{##}
+{#                                                <!-- Item #7 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/ptf9-270x203.png);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Dramatically integrate parallel</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #7 -->#}
+{##}
+{#                                                <!-- Item #8 -->#}
+{#                                                <div class="recent-work_carousel-item">#}
+{#                                                    <!-- Portfolio link container -->#}
+{#                                                    <a href="portfolio-item.html" class="recentwork_carousel__link">#}
+{#                                                        <!-- Hover container -->#}
+{#                                                        <div class="hover recentwork_carousel__hover">#}
+{#                                                            <!-- Background image with custom height -->#}
+{#                                                            <div style="height: 240px; background-image:url(static/assets/images/ptf5-270x203.png);" class="recentwork_carousel__img">#}
+{#                                                            </div>#}
+{#                                                            <!--/ Background image with custom height -->#}
+{##}
+{#                                                            <!-- Hover shadow overlay -->#}
+{#                                                            <span class="hov recentwork_carousel__hov"></span>#}
+{#                                                            <!--/ Hover shadow overlay -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Hover container -->#}
+{##}
+{#                                                        <!-- Content details -->#}
+{#                                                        <div class="details recentwork_carousel__details">#}
+{#                                                            <!-- Tags/Category -->#}
+{#                                                            <span class="recentwork_carousel__cat ">Nome da Modelo</span>#}
+{#                                                            <!--/ Tags/Category -->#}
+{##}
+{#                                                            <!-- Title -->#}
+                                                            {#                                                      <h4 class="recentwork_carousel__crsl-title">Dramatically extend world-class</h4>#}
+{#                                                            <!--/ Title -->#}
+{#                                                        </div>#}
+{#                                                        <!--/ Content details -->#}
+{#                                                    </a>#}
+{#                                                    <!--/ Portfolio link container -->#}
+{#                                                </div>#}
+{#                                                <!--/ Item #8 -->#}
+{#                                            </div>#}
+{#                                            <!--/ .recent_works1 .recentwork_carousel__crsl .js-slick -->#}
+{#                                        </div>#}
+{#                                        <!--/  Recent Work - carousel wrapper - .recentwork_carousel__crsl-wrapper -->#}
+{#                                    </div>#}
+{#                                    <!--/ col-sm-8 -->#}
+{#                                </div>#}
+{#                                <!--/ row -->#}
+{#                            </div>#}
+{#                            <!--/ Recent Work carousel 1 style 2 element -->#}
+                        </div>
+                        <!--/ col-md-12 col-sm-12 -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- Section title -->
+                            <div class="kl-title-block clearfix text-center tbk-symbol--line tbk-icon-pos--after-title">
+                                <!-- Title -->
+                                {#                          <h3 class="tbk__title ">GATAS DA SEMANA</h3>#}
+                                {#                          <!--/ Title -->#}
+                                {##}
+                                {#                          <!-- Title bottom symbol -->#}
+                                {#                          <div class="tbk__symbol ">#}
+                                {#                              <span></span>#}
+                                {#                          </div>#}
+                                {#                          <!--/ Title bottom symbol -->#}
+                                {##}
+                                {#                          <!-- Title bottom text -->#}
+                                {#                          <div class="tbk__text">#}
+                                {#                              <p>Destaques</p>#}
+                                {#                          </div>#}
+                                <!--/ Title bottom text -->
+                            </div>
+                            <!--/ Section title -->
+
+                            <!-- Latest posts new style 2 element  -->
+                            <div class="latest_posts default-style kl-style-2 clearfix">
+                                <div class="row gutter-sm">
+                                    <div class="col-sm-4">
+                                        <!-- Title -->
+                                        <div class="lp-title">
+                                            <h3 class="m_title">5 ESTRELAS</h3>
+
+                                        </div>
+                                        <!--/ Title -->
+                                    </div>
+                                    <!--/ col-sm-4 -->
+
+{#                               NUMBER ONE MOTEL     <div class="col-sm-8">#}
+{#                                        <!-- Big post -->#}
+{#                                        <div class="post big-post">#}
+{#                                            <!-- Post link wrapper -->#}
+{#                                            <a href="blog-post.html" class="hoverBorder">#}
+{#                                                <!-- Border wrapper -->#}
+{#                                                <span class="hoverBorderWrapper">#}
+{#                                              <!-- Image -->#}
+{#                                              <img width="750" height="350" src="{{ STATIC_URL }}assets/images/blog09-750x350.jpg" class="img-responsive" alt="css3panels-alt-04" title="css3panels-alt-04" />#}
+{#                                                    <!--/ Image -->#}
+{##}
+{#                                                    <!-- Hover border/shadow -->#}
+{#                                              <span class="theHoverBorder"></span>#}
+{#                                                    <!--/ Hover border/shadow -->#}
+{#                                          </span>#}
+{#                                                <!--/ Border wrapper -->#}
+{#                                            </a>#}
+{#                                            <!--/ Post link wrapper -->#}
+{##}
+{#                                            <!-- Post details -->#}
+{#                                            <div class="post-details">#}
+{#                                                <!-- Title with link -->#}
+{#                                                <h3 class="m_title"><a href="#">{{  }}</a></h3>#}
+{#                                                <!--/ Title with link -->#}
+{##}
+{#                                                <!-- Details & tags -->#}
+{#                                                <em>{% now 'd b Y' %} <a href="#">+55 82 9 8765 8765</a></em>#}
+{#                                                <!--/ Details & tags -->#}
+{#                                            </div>#}
+{#                                            <!--/ Post details -->#}
+{#                                        </div>#}
+{#                                        <!--/ Big post -->#}
+{#                                    </div>#}
+{#                                    <!--/ col-sm-8 -->#}
+
+                                    {% for motel in motel_list %}
+                                        {% if motel.estrelas == 5 %}
+                                        <div class="col-xs-6 col-sm-3">
+                                            <!-- Post -->
+                                            <div class="post">
+                                                <!-- Post link wrapper -->
+                                                <a href="blog-post.html" class="hoverBorder">
+                                                    <!-- Border wrapper -->
+                                                    <span class="hoverBorderWrapper">
+                                                    <!-- Image -->
+                                                    <img src="{{ STATIC_URL }}assets/images/blog1-370x400.jpg" class="img-responsive" width="370" height="400" alt="" title="" />
+                                                        <!--/ Image -->
+
+                                                        <!-- Hover border/shadow -->
+                                                    <span class="theHoverBorder"></span>
+                                                        <!--/ Hover border/shadow -->
+                                                </span>
+                                                    <!--/ Border wrapper -->
+                                                </a>
+                                                <!--/ Post link wrapper -->
+
+                                                <!-- Post details -->
+                                                <div class="post-details">
+                                                    <!-- Title with link -->
+                                                    <h3 class="m_title"><a href="/{% url 'motel_profile' motel_id=motel.id %}/">{{ motel.nome }}</a></h3>
+                                                    <!--/ Title with link -->
+
+                                                    <!-- Details & tags -->
+                                                    <em>{{ motel.created_at }} <a href="#">{{ motel.telefone }}</a></em>
+                                                    <!--/ Details & tags -->
+                                                </div>
+                                                <!--/ Post details -->
+                                            </div>
+                                            <!--/ Post -->
+                                        </div>
+                                        <!--/ col-xs-6 col-sm-3 -->
+                                        {% endif %}
+                                    {% endfor %}
+
+
+                                </div>
+                                <!--/ .row .gutter-sm -->
+                            </div>
+                            <!--/ Latest posts new style 2 element  -->
+
+
+                            <!-- Spacer with custom height -->
+                            <div class="th-spacer clearfix" style="height: 90px;"></div>
+                            <!--/ Spacer with custom height -->
+
+
+                            <!-- Latest posts new style 2 element  -->
+                            <div class="latest_posts default-style kl-style-2">
+                                <div class="row gutter-sm">
+                                    <div class="col-sm-4">
+                                        <!-- Title -->
+                                        <div class="lp-title">
+                                            <h3 class="m_title">4 ESTRELAS</h3>
+                                        </div>
+                                        <!--/ Title -->
+                                    </div>
+                                    <!--/ col-sm-4 -->
+
+                                    {% for motel in motel_list %}
+                                    {% if motel.estrelas == 4 %}
+                                    <div class="col-xs-6 col-sm-3">
+                                        <!-- Post -->
+                                        <div class="post">
+                                            <!-- Post link wrapper -->
+                                            <a href="blog-post.html" class="hoverBorder">
+                                                <!-- Border wrapper -->
+                                                <span class="hoverBorderWrapper">
+                                                <!-- Image -->
+                                                <img src="{{ STATIC_URL }}assets/images/general-bg-8-370x400.jpg" class="img-responsive" width="370" height="400" alt="" title="" />
+                                                    <!--/ Image -->
+
+                                                    <!-- Hover border/shadow -->
+                                                <span class="theHoverBorder"></span>
+                                                    <!--/ Hover border/shadow -->
+                                            </span>
+                                                <!--/ Border wrapper -->
+                                            </a>
+                                            <!--/ Post link wrapper -->
+
+                                            <!-- Post details -->
+                                            <div class="post-details">
+                                                <!-- Title with link -->
+                                                <h3 class="m_title"><a href="/{{ motel.id }}/">{{ motel.nome }}</a></h3>
+                                                <!--/ Title with link -->
+
+                                                <!-- Details & tags -->
+                                                <em>{{ motel.created_at }} <a href="#">{{ motel.telefone }}</a></em>
+                                                <!--/ Details & tags -->
+                                            </div>
+                                            <!--/ Post details -->
+                                        </div>
+                                        <!--/ Post -->
+                                    </div>
+                                    <!--/ col-xs-6 col-sm-3 -->
+                                    {% else %}
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+                                <!--/ .row .gutter-sm -->
+                            </div>
+                            <!--/ Latest posts new style 2 element  -->
+
+                            <!-- Spacer with custom height -->
+                            <div class="th-spacer clearfix" style="height: 90px;"></div>
+                            <!--/ Spacer with custom height -->
+
+
+                            <!-- Latest posts new style 2 element  -->
+                            <div class="latest_posts default-style kl-style-2">
+                                <div class="row gutter-sm">
+                                    <div class="col-sm-4">
+                                        <!-- Title -->
+                                        <div class="lp-title">
+                                            <h3 class="m_title">3 ESTRELAS</h3>
+                                        </div>
+                                        <!--/ Title -->
+                                    </div>
+                                    <!--/ col-sm-4 -->
+
+                                    {% for motel in motel_list %}
+                                    {% if motel.estrelas == 3 %}
+                                    <div class="col-xs-6 col-sm-3">
+                                        <!-- Post -->
+                                        <div class="post">
+                                            <!-- Post link wrapper -->
+                                            <a href="/{% url 'motel_profile' motel_id=motel.id %}/" class="hoverBorder">
+                                                <!-- Border wrapper -->
+                                                <span class="hoverBorderWrapper">
+                                                <!-- Image -->
+                                                <img src="{{ STATIC_URL }}assets/images/general-bg-8-370x400.jpg" class="img-responsive" width="370" height="400" alt="" title="" />
+                                                    <!--/ Image -->
+
+                                                    <!-- Hover border/shadow -->
+                                                <span class="theHoverBorder"></span>
+                                                    <!--/ Hover border/shadow -->
+                                            </span>
+                                                <!--/ Border wrapper -->
+                                            </a>
+                                            <!--/ Post link wrapper -->
+
+                                            <!-- Post details -->
+                                            <div class="post-details">
+                                                <!-- Title with link -->
+                                                <h3 class="m_title"><a href="/{% url 'motel_profile' motel.id %}/">{{ motel.nome }}</a></h3>
+                                                <!--/ Title with link -->
+
+                                                <!-- Details & tags -->
+                                                <em>{{ motel.created_at }} <a href="#">{{ motel.telefone }}</a></em>
+                                                <!--/ Details & tags -->
+                                            </div>
+                                            <!--/ Post details -->
+                                        </div>
+                                        <!--/ Post -->
+                                    </div>
+                                    <!--/ col-xs-6 col-sm-3 -->
+                                    {% else %}
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+                                <!--/ .row .gutter-sm -->
+                            </div>
+                            <!--/ Latest posts new style 2 element  -->
+                        </div>
+                        <!--/ col-md-12 col-sm-12 -->
+                    </div>
+                    <!--/ row -->
+                </div>
+                <!--/ full_width -->
+            </section>
+
+
+            <section class="hg_section hg_section--relative ptop-80 pbottom-80">
+                <!-- Section background -->
+                <div class="kl-bg-source">
+                    <!-- Gradient overlay -->
+                    <div class="kl-bg-source__overlay" style="background:rgba(205,33,34,1); background: -moz-linear-gradient(left, rgba(205,33,34,1) 0%, rgba(245,72,76,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(205,33,34,1)), color-stop(100%,rgba(245,72,76,1))); background: -webkit-linear-gradient(left, rgba(205,33,34,1) 0%,rgba(245,72,76,1) 100%); background: -o-linear-gradient(left, rgba(205,33,34,1) 0%,rgba(245,72,76,1) 100%); background: -ms-linear-gradient(left, rgba(205,33,34,1) 0%,rgba(245,72,76,1) 100%); background: linear-gradient(to right, rgba(205,33,34,1) 0%,rgba(245,72,76,1) 100%); ">
+                    </div>
+                    <!--/ Gradient overlay -->
+                </div>
+                <!--/ Section background -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- Title element -->
+                            <div class="kl-title-block clearfix tbk-symbol--line tbk-icon-pos--after-title">
+                                <!-- Title with custom font size, gray color and extrabold style -->
+                                <h3 class="tbk__title fs-36 white fw-extrabold">Destaque...</h3>
+
+                                <!-- Title bottom symbol -->
+                                <div class="tbk__symbol ">
+                                    <span></span>
+                                </div>
+                                <!--/ Title bottom symbol -->
+                            </div>
+                            <!--/ Title element -->
+
+                            <!-- Photo Gallery alternative -->
+                            <div class="photogallery-widget">
+                                <!-- Photo gallery wrapper -->
+                                <div class="photogallery-wrapper clearfix">
+                                    <div class="caroufredsel custom stg-slimmer-arrows">
+                                        <ul class="slides">
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/1.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/1.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/2.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/2.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/3.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/3.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/10.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/10.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/5.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/5.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/6.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/6.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/7.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/7.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/8.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/8.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                            <li data-thumb="{{ STATIC_URL }}assets/images/quickgal/9.jpg">
+                                                <img src="{{ STATIC_URL }}assets/images/quickgal/9.jpg" alt="" class="img-responsive">
+
+                                            </li>
+                                        </ul>
+                                        <div class="cfs--navigation">
+                                            <a href="#" class="cfs--prev"></a>
+                                            <a href="#" class="cfs--next"></a>
+                                        </div>
+                                        <div class="cfs-counter"></div>
+                                    </div>
+                                </div>
+                                <!--/ Photo gallery wrapper -->
+                            </div>
+                            <!--/ Photo Gallery alternative -->
+                        </div>
+                        <!--/ col-md-12 col-sm-12 -->
+                    </div>
+                    <!--/ row -->
+                </div>
+                <!--/ container -->
+            </section>
+            <section class="hg_section hg_section--relative ptop-80 pbottom-80">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <!-- Grid Photo Gallery square ratio element container -->
+                            <div class="gridPhotoGallery-container">
+                                <div class="gridPhotoGallery mfp-gallery misc gridPhotoGallery--ratio-square gridPhotoGallery--cols-4" data-cols="4">
+                                    <!-- Grid photo gallery size helper -->
+                                    <div class="gridPhotoGallery__item gridPhotoGallery__item--sizer">
+                                    </div>
+                                    <!--/ Grid photo gallery size helper -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w2 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="Girl Smiling" class="gridPhotoGalleryItem--h2 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl-19.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl-19.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w1 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="Morning Coffee" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl1.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl1.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w1 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="Stone Arch" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image3xxl13.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image3xxl13.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w2 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="A bunch of grapes" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl8.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl8.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w1 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="" class="gridPhotoGalleryItem--h2 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image3xxl12.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image3xxl12.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w2 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl-2.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl-2.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w1 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl-13.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl-13.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w1 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl3.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl3.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+
+                                    <!-- Photo gallery item -->
+                                    <div class="gridPhotoGallery__item gridPhotoGalleryItem--w2 ">
+                                        <!-- Pop-up image + Link & Background image -->
+                                        <a title="" class="gridPhotoGalleryItem--h1 gridPhotoGallery__link hoverBorder" data-lightbox="mfp" data-mfp="image" href="{{ STATIC_URL }}assets/images/image1xxl-11.jpg">
+                                            <!-- Background image -->
+                                            <div class="gridPhotoGallery__img" style="background-image:url(static/assets/images/image1xxl-11.jpg)">
+                                            </div>
+                                            <!--/ Background image -->
+
+                                            <!-- Icon -->
+                                            <i class="kl-icon glyphicon glyphicon-search circled-icon ci-large"></i>
+                                            <!--/ Icon -->
+                                        </a>
+                                        <!--/ Pop-up image + Link & Background image -->
+                                    </div>
+                                    <!--/ Photo gallery item -->
+                                </div>
+                                <!--/ .gridPhotoGallery ratio-square cols-4 -->
+                            </div>
+                            <!--/ Grid Photo Gallery square ratio element container -->
+                        </div>
+                    </div>
+                    <!--/ row -->
+                </div>
+                <!--/ container -->
+            </section>
+
+        {% endblock %}
+
+        <!-- Footer - Default Style 1 -->
+        {% block footer %}
+            <footer id="footer" data-footer-style="1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div>
+                                <h3 class="title m_title">FOOTER MENU</h3>
+                                <div class="sbs">
+                                    <ul class="menu">
+                                        <li><a href="#">Curabitur iaculis</a></li>
+                                        <li><a href="#">Parturient montes</a></li>
+                                        <li><a href="#">Vulputate magna</a></li>
+                                        <li><a href="#">Cum sociis natoque</a></li>
+                                        <li><a href="#">Nulla varius commodo</a></li>
+                                        <li><a href="#">Parturient montes</a></li>
+                                        <li><a href="#">Vulputate magna</a></li>
+                                        <li><a href="#">Cum sociis natoque</a></li>
+                                        <li><a href="#">Nulla varius commodo</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ col-sm-5 -->
+
+                        <div class="col-sm-4">
+                            <div class="newsletter-signup">
+                                <h3 class="title m_title">QUERO RECEBER NOVIDADES</h3>
+                                <p>Inscreva-se para receber as novidades ddo portal.</p>
+                                <form action="." method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <input type="email" value="" name="EMAIL" class="nl-email form-control" id="mce-EMAIL" placeholder="seu@email.com" required>
+                                    <input type="submit" name="subscribe" class="nl-submit" id="mc-embedded-subscribe" value="ENVIAR">
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;">
+                                        <input type="text" name="b_xxxxxxxxxxxxxxxxxxxCUSTOMxxxxxxxxx" value="">
+                                    </div>
+                                </form>
+                                <div id="notification_container"></div>
+                                <p>NÃO MANDAMOS SPAM!</p>
+                            </div><!-- end newsletter-signup -->
+                        </div>
+                        <!-- col-sm-4 -->
+
+                        <div class="col-sm-3">
+                            <div>
+                                <h3 class="title m_title">FALE CONOSCO</h3>
+                                <div class="contact-details"><p><strong>T +55 (82) 9 8765 8765</strong><br>
+                                    Email: <a href="#">contato@thehotbrasil.com</a></p>
+                                    <p>The Hot Brasil<br>
+                                        Street nr 100, 4536534, Chicago, US</p>
+                                    <p><a href="#" target="_blank"><i class="icon-map-marker icon-white"></i> Ver no mapa</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ col-sm-3 -->
+                    </div>
+                    <!--/ row -->
+
+
+                    <!--/ row -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="bottom clearfix">
+                                <!-- social-icons -->
+                                <ul class="social-icons sc--clean clearfix">
+                                    <li class="title">GET SOCIAL</li>
+                                    <li><a href="#" target="_self" class="icon-facebook" title="Facebook"></a></li>
+                                    <li><a href="#" target="_self" class="icon-twitter" title="Twitter"></a></li>
+                                    <li><a href="#" target="_self" class="icon-dribbble" title="Dribbble"></a></li>
+                                    <li><a href="#" target="_blank" class="icon-google" title="Google Plus"></a></li>
+                                </ul>
+                                <!--/ social-icons -->
+
+                                <!-- copyright -->
+                                <div class="copyright">
+                                    <a href="cam-girls.html">
+                                        <img src="{{ STATIC_URL }}assets/images/kallyas-footerlogo.svg" alt="TheHotBrasil">
+                                    </a>
+                                    <p>©{% now 'Y' %} Todos os direitos reservados. </p>
+                                </div>
+                                <!--/ copyright -->
+                            </div>
+                            <!--/ bottom -->
+                        </div>
+                        <!--/ col-sm-12 -->
+                    </div>
+                    <!--/ row -->
+                </div>
+                <!--/ container -->
+            </footer>
+        {% endblock %}
+        <!--/ Footer - Default Style 1 -->
+    </div>
+{% endblock %}
+<!--/ Page Wrapper -->
+
+
+<!-- Bubble-box with notification-box style -->
+{% block notification-box %}
+    {#        <div class="bubble-box notification-box bg-purple" data-reveal-at="1200" data-hide-after="9000">#}
+    {#            <div class="bb--inner">#}
+    {#                <p>This is just a simple notice. Everything is in order and this is a <a href="#">simple link.</a></p>#}
+    {#            </div>#}
+    {#            <span class="bb--close"><i class="glyphicon glyphicon-remove"></i></span>#}
+    {#        </div>#}
+{% endblock %}
+<!-- / Bubble-box with notification-box style -->
+
+
+<!-- Login Panel content -->
+<div id="login_panel" class="mfp-hide login box-popup auth-popup">
+    <div class="inner-container login-panel auth-popup-panel">
+        <h3 class="m_title m_title_ext text-custom auth-popup-title tcolor">Faça login para ter acesso a área restrita.</h3>
+
+        <form class="login_panel" id="frm-login" method="post" action="{% url 'account_login' %}/?next={{request.path}}">
+            {% csrf_token %}
+            <div class="form-group kl-fancy-form">
+                <input type="text" id="id_login" name="login" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="seu@email.com">
+                <label class="kl-font-alt kl-fancy-form-label">EMAIL</label>
+            </div>
+            <div class="form-group kl-fancy-form">
+                <input type="password" id="id_password" name="password" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="type password">
+                <label class="kl-font-alt kl-fancy-form-label">SENHA</label>
+            </div>
+            <h4 class="" id="message"></h4>
+
+            <label class="auth-popup-remember" for="kl-rememberme"><input type="checkbox" name="rememberme" id="kl-rememberme" value="forever" class="auth-popup-remember-chb"> Lembrar-me </label>
+            <input type="submit" id="login" name="submit_button" class="btn zn_sub_button btn-fullcolor btn-md" value="ENTRAR">
+            <div class="links auth-popup-links">
+                <a href="#register_panel" class="create_account auth-popup-createacc kl-login-box auth-popup-link">QUERO CRIAR UMA CONTA</a><span class="sep auth-popup-sep"></span><a href="#forgot_panel" class="kl-login-box auth-popup-link">ESQUECEU SUA SENHA?</a>
+            </div>
+        </form>
+
+    </div>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+</div>
+<div id="register_panel" class="mfp-hide loginbox-popup auth-popup">
+    <div class="inner-container register-panel auth-popup-panel">
+        
+        <h3 class="m_title m_title_ext text-custom auth-popup-title">CRIAR UMA CONTA</h3>
+        <form class="register_panel" id="signup_form" name="signup_form" action="{% url 'account_signup' %}?next={{request.path}}" method="POST">
+        {% csrf_token %}
+            <div class="form-group kl-fancy-form ">
+                <input type="text" id="reg-username" name="username" value="{{username}}" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="type desired username"><label class="kl-font-alt kl-fancy-form-label">USERNAME</label>
+            </div>
+            <div class="form-group kl-fancy-form">
+                <input type="text" id="reg-email" name="email" value="{{email}}" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="your-email@website.com"><label class="kl-font-alt kl-fancy-form-label">EMAIL</label>
+            </div>
+            <div class="form-group kl-fancy-form">
+                <input type="password" id="reg-pass" name="password1" value="{{password1}}" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="*****"><label class="kl-font-alt kl-fancy-form-label">PASSWORD</label>
+            </div>
+            <div class="form-group kl-fancy-form">
+                <input type="password" id="reg-pass2" name="password2" value="{{password2}}" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="*****"><label class="kl-font-alt kl-fancy-form-label">CONFIRM PASSWORD</label>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="signup" name="submit" class="btn zn_sub_button btn-block btn-fullcolor btn-md" value="CREATE MY ACCOUNT">
+            </div>
+            <div class="links auth-popup-links">
+                <a href="#login_panel" class="kl-login-box auth-popup-link">JÁ TEM UMA CONTA?</a>
+            </div>
+        </form>
+      
+    </div>
+</div>
+<div id="forgot_panel" class="mfp-hide loginbox-popup auth-popup forgot-popup">
+    <div class="inner-container forgot-panel auth-popup-panel">
+        <h3 class="m_title m_title_ext text-custom auth-popup-title">ESQUECEU SUA SENHA?</h3>
+        <form class="forgot_form" id="frm-reset" name="reset_form" method="post">
+        {% csrf_token %}
+            <div class="form-group kl-fancy-form">
+                <input type="text" id="id_email" name="email" class="form-control inputbox kl-fancy-form-input kl-fw-input" placeholder="...">
+                <label class="kl-font-alt kl-fancy-form-label">EMAIL</label>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="recover" name="submit" class="btn btn-block zn_sub_button btn-fullcolor btn-md" value="SOLICITAR NOVA SENHA!">
+            </div>
+            <div class="links auth-popup-links">
+                <a href="#login_panel" class="kl-login-box auth-popup-link">AH, LEMBREI A SENHA!</a>
+            </div>
+        </form>
+    </div>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+</div>
+<!--/ Login Panel content -->
+
+
+<!-- ToTop trigger -->
+<a href="#" id="totop">TOPO</a>
+<!--/ ToTop trigger -->
+
+
+
+
+
+<!-- JS FILES // These should be loaded in every page -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/kl-plugins.js"></script>
+
+<!-- JS FILES // Loaded on this page -->
+<!-- Requried js script for Slideshow Scroll effect -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/plugins/scrollme/jquery.scrollme.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/plugins/_sliders/caroufredsel/jquery.carouFredSel-packed.js"></script>
+
+<!-- Required js script for iOS Slider -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/plugins/_sliders/ios/jquery.iosslider.min.js"></script>
+
+<!-- Required js trigger for iOS Slider -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/trigger/slider/ios/kl-ios-slider.js"></script>
+
+<!-- Slick required js script for Partners Carousel& Screenshot Box Carousel elements -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/plugins/_sliders/slick/slick.js"></script>
+
+<!-- Required js trigger for Partners Carousel & Screenshot Box Carousel elements -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/trigger/kl-slick-slider.js"></script>
+
+<!-- Custom Kallyas JS codes -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/kl-scripts.js"></script>
+
+<!-- Custom user JS codes -->
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/kl-custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" >
+    $(document).ready(function() {
+        $("#frm-login").submit(function(event){
+            $.ajax({
+                type:"POST",
+                url:"{% url 'account_login' %}",
+                data: $('#frm-login').serialize(),
+                success: function(response){
+                    console.log(response);
+                    window.location="/";
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    $('#message').html("Dados inválidos, tente novamente!");
+                    $('#id_login').addClass('error');
+                    $('#id_password').addClass('error');
+                }
+            });
+            return false; //<---- move it here
+        });
+        $("#frm-reset").submit(function(event){
+            $.ajax({
+                type:"POST",
+                url:"{% url 'account_reset_password' %}",
+                data: $('#frm-reset').serialize(),
+                success: function(response){
+                    console.log(response);
+                    window.location="/";
+                    console.log("SENT");
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    console.log("ERROR");
+                    $('#message-reset').html("Invalid E-mail.");
+                    $('#id_email').addClass('error');
+                }
+            });
+            return false; //<---- move it here
+        });
+        $("#signup_form").submit(function(event){
+            $.ajax({
+                
+                type:"POST",
+                url:"{% url 'account_signup' %}",
+                data: $('#signup_form').serialize(),
+                success: function(response){
+                    console.log("form submited")
+                    window.location=response.location;
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+
+                    if (jqXHR['responseJSON']['form_errors']['email']){
+                        $('#reg-email').addClass('error');
+                        $('#message-signup-email').html(jqXHR['responseJSON']['form_errors']['email']);
+                    }
+                    if (jqXHR['responseJSON']['form_errors']['username']){
+                        $('#reg-username').addClass('error');
+                        $('#message-signup-nome').html(jqXHR['responseJSON']['form_errors']['username'])
+                    }
+
+                }
+            });
+            return false; //<---- move it here
+        });
+
+    });
+
+    $(document).ready(function () {
+            $('body').css({'overflow':'hidden'});
+
+
+
+            //select the POPUP FRAME and show it
+            $("#popup").hide().fadeIn(1000);
+
+            //close the POPUP if the button with id="close" is clicked
+            $("#open").on("click", function (e) {
+                e.preventDefault();
+                $("#popup").fadeOut(1000);
+                $('body').css({'overflow':'visible'});
+            });
+
+            $("#getout").on("click", function (e) {
+                e.preventDefault();
+                window.close();
+            });
+
+        });
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112257531-2');
+</script>
+
+</body>
+{% endblock %}
+</html>
+
+if (jqXHR['responseJSON']['form_errors']['password1']){
+                        $('#reg-pass').addClass('error');
+                        $('#message-signup-password').html(jqXHR['responseJSON']['form_errors']['password1']);
+                    }

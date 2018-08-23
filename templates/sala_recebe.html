@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
+        <script>
+            var peer = new Peer({key: 'lwjd5qra8257b9'});
+            var conn = peer.connect('another-peers-id');
+            // on open will be launch when you successfully connect to PeerServer
+            conn.on('open', function(){
+              // here you have conn.id
+              conn.send('hi!');
+            });
+
+            peer.on('connection', function(conn) {
+              conn.on('data', function(data){
+                // Will print 'hi!'
+                console.log(data);
+              });
+            });
+
+        </script>
+    </head>
+</html>
